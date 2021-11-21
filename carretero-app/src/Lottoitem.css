@@ -1,0 +1,7 @@
+.carousel-container {
+  margin: 1vw;
+  justify-content: center;
+  align-items: center;
+  border-color: black;
+  border-width: thick;
+}

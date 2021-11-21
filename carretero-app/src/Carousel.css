@@ -1,0 +1,87 @@
+.carousel-container {
+  margin: 0.5vw;
+  justify-content: center;
+  align-items: center;
+  border-color: black;
+  border-width: thick;
+  border: 1px solid #d9d9d9;
+  border-radius: 20px;
+  width: 15vw;
+  padding-left: 10px;
+  flex-shrink: 0;
+}
+
+.carousel-select-container {
+  max-height: 78vh;
+  overflow: auto;
+  margin: 0.5vw;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+  min-width: 15vw;
+  padding-left: 10px;
+}
+
+.carousel-item {
+  display: flex;
+  flex-direction: row;
+  max-width: 99vw;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.select-div {
+  align-items: center;
+  width: 50ch;
+  display: flex;
+  height: 10vh;
+}
+
+.selector-label {
+  margin-right: 5px;
+}
+
+.table-container {
+  padding: 30px;
+}
+
+table {
+  padding: 30px;
+  border-collapse: collapse;
+}
+table th {
+  justify-content: center;
+  background-color: lightblue;
+}
+
+table th,
+table td {
+  width: 20ch;
+  height: 5vh;
+  border: 1px solid #d9d9d9;
+  justify-content: center;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.selector-form {
+  margin-bottom: 20px;
+}
+
+.two-columns {
+  display: flex;
+}
+
+.first-column {
+  width: 70%;
+}
+
+.second-column {
+  padding-top: 8%;
+  padding-left: 8%;
+}
+
+.lotto-icon {
+  height: 40px;
+  width: 40px;
+}

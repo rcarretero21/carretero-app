@@ -1,0 +1,7 @@
+version: "3.5"
+
+services:
+  lotto-app-react:
+    image: carretero-app:dev
+    ports:
+      - "3000:3000"
