@@ -1,4 +1,4 @@
-.carousel-container {
+.carousel-item-container {
   margin: 0.5vw;
   justify-content: center;
   align-items: center;
@@ -6,9 +6,14 @@
   border-width: thick;
   border: 1px solid #d9d9d9;
   border-radius: 20px;
-  width: 15vw;
+  width: 300px;
   padding-left: 10px;
   flex-shrink: 0;
+}
+
+.highlighted {
+  border-width: bold;
+  border-color: red;
 }
 
 .carousel-select-container {
@@ -22,7 +27,8 @@
   padding-left: 10px;
 }
 
-.carousel-item {
+.carousel-items {
+  padding: 10px;
   display: flex;
   flex-direction: row;
   max-width: 99vw;
@@ -31,14 +37,16 @@
 }
 
 .select-div {
-  align-items: center;
+  align-items: top;
+  margin-top: 10px;
   width: 50ch;
   display: flex;
-  height: 10vh;
+  z-index: 1;
 }
 
 .selector-label {
   margin-right: 5px;
+  margin-top: 8px;
 }
 
 .table-container {
@@ -66,6 +74,10 @@ table td {
 
 .selector-form {
   margin-bottom: 20px;
+}
+
+.margin-bottom {
+  margin-bottom: 10vh;
 }
 
 .two-columns {

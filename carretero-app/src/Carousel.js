@@ -79,7 +79,7 @@ export default class Carousel extends Component {
   render() {
     return (
       <div>
-        <div class="carousel-item">
+        <div class="carousel-items">
           {this.state.carouselLottoItems.map((lottoItem) => (
             <LottoItem
               handler={this.handler}
@@ -105,11 +105,31 @@ export default class Carousel extends Component {
 }
 
 class LottoItem extends Component {
+  state = {
+    highlightContainer: false,
+  };
+
+  highlightBox = () => {
+    console.log(this.state.highlightContainer);
+    this.setState({ highlightContainer: true });
+  };
+
+  unhighlightBox = () => {
+    console.log(this.state.highlightContainer);
+    this.setState({ highlightContainer: false });
+  };
+
   render() {
     const color = getRandomItem(colorsArray, this.props.name);
     return (
       <div
-        class="carousel-container"
+        onMouseOver={this.highlightBox}
+        onMouseLeave={this.unhighlightBox}
+        className={
+          this.state.highlightContainer
+            ? "carousel-item-container highlighted"
+            : "carousel-item-container"
+        }
         onClick={() =>
           this.props.handler({
             name: this.props.name,
@@ -191,7 +211,13 @@ class LottoDetails extends React.Component {
   render() {
     return (
       <div class="carousel-select-container">
-        <form class="selector-form">
+        <form
+          className={
+            this.state.showTable
+              ? "selector-form"
+              : "selector-form margin-bottom"
+          }
+        >
           <label>
             <div class="select-div">
               <span class="selector-label">Select date: </span>
